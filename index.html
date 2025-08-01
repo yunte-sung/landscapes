@@ -93,12 +93,12 @@
         const container = document.getElementById('media-container');
 
         // Decide whether it's an image or video by its extension
-        if (randomFile.endsWith('.mp4')) {
-            container.innerHTML = `<video width="320" height="240" controls autoplay>
+        if (/\.(mp4|mov)$/i.test(randomFile)) {
+            container.innerHTML = `<video width="640" height="480" controls autoplay>
                 <source src="${randomFile}" type="video/mp4">Your browser does not support the video tag.
             </video>`;
         } else {
-            container.innerHTML = `<img src="${randomFile}" alt="Random media" width="320">`;
+            container.innerHTML = `<img src="${randomFile}" alt="Random media" width="640">`;
         }
     </script>
 </body>
