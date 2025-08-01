@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Media</title>
+</head>
+<body>
+    <div id="media-container"></div>
+    <script>
+        // List your media file names here
+        const mediaFiles = [
+            "assets/ebccb549f1c3473c8483efd53176fccf.mov",
+            "assets/IMG_9118.HEIC",
+            "assets/IMG_6786.MOV",
+            "assets/Ich bin ein Berliner.mov",
+            "assets/IMG_6787.MOV",
+            "assets/2dc8a370e6444c7eaeadca11953b466e.mov",
+            "assets/IMG_3038.MOV",
+            "assets/IMG_5924.MOV",
+            "assets/IMG_7262.HEIC",
+            "assets/efc40ddcee4e43a5b34c697ef64d60ce.mov",
+            "assets/IMG_5925.MOV",
+            "assets/IMG_2910.MOV",
+            "assets/IMG_5919.MOV",
+            "assets/IMG_6784.MOV",
+            "assets/IMG_3011.MOV",
+            "assets/92dae0b8f9d74dcaae6d9043692d42a4.mov",
+            "assets/IMG_6810.MOV",
+            "assets/IMG_3808.MOV",
+            "assets/IMG_5921.MOV",
+            "assets/IMG_4418.MOV",
+            "assets/IMG_9115.MOV",
+            "assets/IMG_5920.MOV",
+            "assets/IMG_6805.MOV",
+            "assets/WhatsApp Video 2025-07-20 at 19.56.46.mp4",
+            "assets/IMG_0723.MOV",
+            "assets/692e864069134ce680fe0fa87e837917.mov",
+            "assets/IMG_5922.MOV",
+            "assets/ae7ee553921340708bd76fac2818e81c.mov",
+            "assets/IMG_5923.MOV",
+            "assets/WhatsApp Video 2025-07-20 at 19.59.14.mp4",
+            "assets/IMG_9119.heic",
+            "assets/IMG_4140.HEIC",
+            "assets/IMG_2385.MOV",
+            "assets/IMG_2346.MOV",
+            "assets/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg",
+            "assets/IMG_6097.MOV",
+            "assets/IMG_5944.MOV",
+            "assets/IMG_7612.MOV",
+            "assets/IMG_4441.MOV",
+            "assets/a78e1fa8029043299cbd9ad90e4373e0.mov",
+            "assets/IMG_7613.MOV",
+            "assets/IMG_7607.MOV",
+            "assets/IMG_1882.MOV",
+            "assets/IMG_3071.MOV",
+            "assets/IMG_2384.MOV",
+            "assets/IMG_7120.HEIC",
+            "assets/IMG_2392.MOV",
+            "assets/9bf4cbcbe0d04ec8b1f27bbc084fd501.mov",
+            "assets/IMG_7268.HEIC",
+            "assets/IMG_7605.MOV",
+            "assets/IMG_6117.HEIC",
+            "assets/IMG_7244.HEIC",
+            "assets/aa8c353c8cac413da2ef8e5d14bb11f0.mov",
+            "assets/IMG_4868.HEIC",
+            "assets/IMG_2393.MOV",
+            "assets/IMG_6785.HEIC",
+            "assets/BADDF492-6F79-4A3D-8C4C-BA6398A1FE69_1_105_c.jpeg",
+            "assets/3380a834a9954867ae6313ad310bc357.mov",
+            "assets/IMG_7588.MOV",
+            "assets/IMG_0581.MOV",
+            "assets/WhatsApp Video 2025-07-20 at 19.56.25.mp4",
+            "assets/IMG_3288.MOV",
+            "assets/e1b66aaaa88a439486f34104902d132f.mov",
+            "assets/IMG_7603.MOV",
+            "assets/IMG_7602.MOV",
+            "assets/IMG_0409.MOV",
+            "assets/IMG_7586.MOV",
+            "assets/75ac01654f91424b8a7c7d271b29b9f3.mov",
+            "assets/IMG_7607(1).MOV",
+            "assets/IMG_6908.MOV",
+            "assets/868A6180-BF0C-44E8-90FE-E1D54D7CD9F1_1_106_c.jpeg",
+            "assets/IMG_7266.HEIC",
+            "assets/IMG_2951.MOV",
+            "assets/WhatsApp Video 2025-07-20 at 19.59.53.mp4",
+            "assets/IMG_5184.MOV",
+            "assets/IMG_7585.MOV",
+            "assets/IMG_7624.MOV",
+            "assets/IMG_4462.MOV"
+        ];
+
+        // Choose random file
+        const randomFile = mediaFiles[Math.floor(Math.random() * mediaFiles.length)];
+        const container = document.getElementById('media-container');
+
+        // Decide whether it's an image or video by its extension
+        if (randomFile.endsWith('.mp4')) {
+            container.innerHTML = `<video width="320" height="240" controls autoplay>
+                <source src="${randomFile}" type="video/mp4">Your browser does not support the video tag.
+            </video>`;
+        } else {
+            container.innerHTML = `<img src="${randomFile}" alt="Random media" width="320">`;
+        }
+    </script>
+</body>
+</html>
